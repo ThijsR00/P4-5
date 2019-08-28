@@ -20,6 +20,9 @@
         <property name="reizigerID" type="int" access="field">
             <column name="REIZIGERID" />
         </property>
-        <one-to-one name="reiziger" cascade="all"></one-to-one> 
+        
+        
+        <many-to-one name="reiziger" class="hibernate.Reiziger"
+            column="REIZIGERID" not-null="true"/>
     </class>
 </hibernate-mapping>
